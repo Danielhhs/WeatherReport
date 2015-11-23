@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5453668E1BFEEA4800E8CCBB /* ForecastSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5453668D1BFEEA4800E8CCBB /* ForecastSearchTableViewController.m */; };
+		545366911BFEF3E700E8CCBB /* LocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 545366901BFEF3E700E8CCBB /* LocationHelper.m */; };
+		545366951BFF26C900E8CCBB /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 545366941BFF26C900E8CCBB /* SessionManager.m */; };
+		545366981C01A62600E8CCBB /* WeatherDetailViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545366971C01A62600E8CCBB /* WeatherDetailViewControllerTableViewController.m */; };
+		5453669C1C01C0F900E8CCBB /* Enums.m in Sources */ = {isa = PBXBuildFile; fileRef = 5453669B1C01C0F900E8CCBB /* Enums.m */; };
+		545366A01C02A96700E8CCBB /* ActivityMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5453669F1C02A96700E8CCBB /* ActivityMaskView.m */; };
+		545366A41C02B51700E8CCBB /* NextSevenDaysTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545366A31C02B51700E8CCBB /* NextSevenDaysTableViewController.m */; };
+		545366A71C02B53500E8CCBB /* NextTwentyFourHoursTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545366A61C02B53500E8CCBB /* NextTwentyFourHoursTableViewController.m */; };
+		545366AA1C02B8AC00E8CCBB /* MoreDetailsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545366A91C02B8AC00E8CCBB /* MoreDetailsContainerViewController.m */; };
 		54EFE0C81BFB304600679C22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EFE0C71BFB304600679C22 /* main.m */; };
 		54EFE0CB1BFB304600679C22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EFE0CA1BFB304600679C22 /* AppDelegate.m */; };
-		54EFE0CE1BFB304600679C22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EFE0CD1BFB304600679C22 /* ViewController.m */; };
 		54EFE0D11BFB304600679C22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EFE0CF1BFB304600679C22 /* Main.storyboard */; };
 		54EFE0D31BFB304600679C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EFE0D21BFB304600679C22 /* Assets.xcassets */; };
 		54EFE0D61BFB304600679C22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EFE0D41BFB304600679C22 /* LaunchScreen.storyboard */; };
@@ -35,12 +43,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5453668C1BFEEA4800E8CCBB /* ForecastSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForecastSearchTableViewController.h; sourceTree = "<group>"; };
+		5453668D1BFEEA4800E8CCBB /* ForecastSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastSearchTableViewController.m; sourceTree = "<group>"; };
+		5453668F1BFEF3E700E8CCBB /* LocationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationHelper.h; sourceTree = "<group>"; };
+		545366901BFEF3E700E8CCBB /* LocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationHelper.m; sourceTree = "<group>"; };
+		545366931BFF26C900E8CCBB /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
+		545366941BFF26C900E8CCBB /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
+		545366961C01A62600E8CCBB /* WeatherDetailViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherDetailViewControllerTableViewController.h; sourceTree = "<group>"; };
+		545366971C01A62600E8CCBB /* WeatherDetailViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherDetailViewControllerTableViewController.m; sourceTree = "<group>"; };
+		5453669A1C01C0F900E8CCBB /* Enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		5453669B1C01C0F900E8CCBB /* Enums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enums.m; sourceTree = "<group>"; };
+		5453669E1C02A96700E8CCBB /* ActivityMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityMaskView.h; sourceTree = "<group>"; };
+		5453669F1C02A96700E8CCBB /* ActivityMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityMaskView.m; sourceTree = "<group>"; };
+		545366A21C02B51700E8CCBB /* NextSevenDaysTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextSevenDaysTableViewController.h; sourceTree = "<group>"; };
+		545366A31C02B51700E8CCBB /* NextSevenDaysTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextSevenDaysTableViewController.m; sourceTree = "<group>"; };
+		545366A51C02B53500E8CCBB /* NextTwentyFourHoursTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextTwentyFourHoursTableViewController.h; sourceTree = "<group>"; };
+		545366A61C02B53500E8CCBB /* NextTwentyFourHoursTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextTwentyFourHoursTableViewController.m; sourceTree = "<group>"; };
+		545366A81C02B8AC00E8CCBB /* MoreDetailsContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreDetailsContainerViewController.h; sourceTree = "<group>"; };
+		545366A91C02B8AC00E8CCBB /* MoreDetailsContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreDetailsContainerViewController.m; sourceTree = "<group>"; };
 		54EFE0C31BFB304600679C22 /* WeatherReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54EFE0C71BFB304600679C22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		54EFE0C91BFB304600679C22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54EFE0CA1BFB304600679C22 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		54EFE0CC1BFB304600679C22 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		54EFE0CD1BFB304600679C22 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		54EFE0D01BFB304600679C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54EFE0D21BFB304600679C22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54EFE0D51BFB304600679C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +102,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		545366991C01AC9000E8CCBB /* WeatherDetail */ = {
+			isa = PBXGroup;
+			children = (
+				545366961C01A62600E8CCBB /* WeatherDetailViewControllerTableViewController.h */,
+				545366971C01A62600E8CCBB /* WeatherDetailViewControllerTableViewController.m */,
+				545366A81C02B8AC00E8CCBB /* MoreDetailsContainerViewController.h */,
+				545366A91C02B8AC00E8CCBB /* MoreDetailsContainerViewController.m */,
+				545366A21C02B51700E8CCBB /* NextSevenDaysTableViewController.h */,
+				545366A31C02B51700E8CCBB /* NextSevenDaysTableViewController.m */,
+				545366A51C02B53500E8CCBB /* NextTwentyFourHoursTableViewController.h */,
+				545366A61C02B53500E8CCBB /* NextTwentyFourHoursTableViewController.m */,
+			);
+			name = WeatherDetail;
+			sourceTree = "<group>";
+		};
+		545366AB1C02BA5800E8CCBB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				545366931BFF26C900E8CCBB /* SessionManager.h */,
+				545366941BFF26C900E8CCBB /* SessionManager.m */,
+				5453668F1BFEF3E700E8CCBB /* LocationHelper.h */,
+				545366901BFEF3E700E8CCBB /* LocationHelper.m */,
+				5453669E1C02A96700E8CCBB /* ActivityMaskView.h */,
+				5453669F1C02A96700E8CCBB /* ActivityMaskView.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		54EFE0BA1BFB304600679C22 = {
 			isa = PBXGroup;
 			children = (
@@ -103,13 +155,17 @@
 			children = (
 				54EFE0C91BFB304600679C22 /* AppDelegate.h */,
 				54EFE0CA1BFB304600679C22 /* AppDelegate.m */,
-				54EFE0CC1BFB304600679C22 /* ViewController.h */,
-				54EFE0CD1BFB304600679C22 /* ViewController.m */,
 				54EFE0CF1BFB304600679C22 /* Main.storyboard */,
+				5453668C1BFEEA4800E8CCBB /* ForecastSearchTableViewController.h */,
+				5453668D1BFEEA4800E8CCBB /* ForecastSearchTableViewController.m */,
+				545366991C01AC9000E8CCBB /* WeatherDetail */,
+				545366AB1C02BA5800E8CCBB /* Helper */,
 				54EFE0D21BFB304600679C22 /* Assets.xcassets */,
 				54EFE0D41BFB304600679C22 /* LaunchScreen.storyboard */,
 				54EFE0D71BFB304600679C22 /* Info.plist */,
 				54EFE0C61BFB304600679C22 /* Supporting Files */,
+				5453669A1C01C0F900E8CCBB /* Enums.h */,
+				5453669B1C01C0F900E8CCBB /* Enums.m */,
 			);
 			path = WeatherReport;
 			sourceTree = "<group>";
@@ -270,9 +326,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54EFE0CE1BFB304600679C22 /* ViewController.m in Sources */,
+				545366981C01A62600E8CCBB /* WeatherDetailViewControllerTableViewController.m in Sources */,
+				545366A01C02A96700E8CCBB /* ActivityMaskView.m in Sources */,
+				545366911BFEF3E700E8CCBB /* LocationHelper.m in Sources */,
+				5453669C1C01C0F900E8CCBB /* Enums.m in Sources */,
+				545366951BFF26C900E8CCBB /* SessionManager.m in Sources */,
+				545366A41C02B51700E8CCBB /* NextSevenDaysTableViewController.m in Sources */,
 				54EFE0CB1BFB304600679C22 /* AppDelegate.m in Sources */,
+				5453668E1BFEEA4800E8CCBB /* ForecastSearchTableViewController.m in Sources */,
 				54EFE0C81BFB304600679C22 /* main.m in Sources */,
+				545366A71C02B53500E8CCBB /* NextTwentyFourHoursTableViewController.m in Sources */,
+				545366AA1C02B8AC00E8CCBB /* MoreDetailsContainerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WeatherReport/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.daniel.WeatherReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WeatherReport/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.daniel.WeatherReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +564,7 @@
 				54EFE0F21BFB304600679C22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54EFE0F31BFB304600679C22 /* Build configuration list for PBXNativeTarget "WeatherReportTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +573,7 @@
 				54EFE0F51BFB304600679C22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54EFE0F61BFB304600679C22 /* Build configuration list for PBXNativeTarget "WeatherReportUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +582,7 @@
 				54EFE0F81BFB304600679C22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
