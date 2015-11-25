@@ -14,6 +14,8 @@
 #import "ActivityMaskView.h"
 #import "StatePickerViewController.h"
 #import "ContainerViewControllerHelper.h"
+#import "ForecastIOViewController.h"
+#import "AboutViewController.h"
 
 @interface ForecastSearchTableViewController ()<UITextFieldDelegate, StatePickerViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *streetTextField;
@@ -43,10 +45,17 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(makeAllTextFieldsResignFirstResponder)];
     [self.view addGestureRecognizer:tap];
     
-    UIButton *forecastIcon = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 234 - 50, 400, 234, 100)];
+    UIButton *forecastIcon = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 167 - 20, 400, 167, 50)];
     [forecastIcon setImage:[UIImage imageNamed:@"forecast_logo.png"] forState:UIControlStateNormal];
     [forecastIcon addTarget:self action:@selector(goToForecastWebsite) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:forecastIcon];
+    
+    UIButton *aboutButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 400, 50, 30)];
+    NSAttributedString *title = [[NSAttributedString alloc] initWithString:@"ABOUT" attributes:@{NSFontAttributeName : [UIFont fontWithName:@"ChalkboardSE-Regular" size:20]}];
+    [aboutButton setAttributedTitle:title forState:UIControlStateNormal];
+    [aboutButton sizeToFit];
+    [aboutButton addTarget:self action:@selector(goToAboutPage) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:aboutButton];
 }
 
 - (void) viewWillDisappear:(BOOL)animated
@@ -126,7 +135,14 @@
 
 - (void) goToForecastWebsite
 {
-    
+    ForecastIOViewController *forecastIOViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ForecastIOViewController"];
+    [self.navigationController pushViewController:forecastIOViewController animated:YES];
+}
+
+- (void) goToAboutPage
+{
+    AboutViewController *aboutViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"AboutViewController"];
+    [self.navigationController pushViewController:aboutViewController animated:YES];
 }
 
 - (void) makeAllTextFieldsResignFirstResponder

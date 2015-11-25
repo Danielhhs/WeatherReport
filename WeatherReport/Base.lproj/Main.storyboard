@@ -1030,6 +1030,94 @@
             </objects>
             <point key="canvasLocation" x="2283" y="1496"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="avT-ct-WDO">
+            <objects>
+                <viewController storyboardIdentifier="AboutViewController" id="IIN-cO-UHV" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yFP-nM-m8k"/>
+                        <viewControllerLayoutGuide type="bottom" id="l9m-Mq-MCZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tow-TW-2qn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hNo-pR-Ae1">
+                                <rect key="frame" x="60" y="67" width="200" height="200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="IWB-5p-B1f"/>
+                                    <constraint firstAttribute="height" constant="200" id="dDe-UM-frC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在长身体的逗比少年张嘉斌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfu-ju-tjx">
+                                <rect key="frame" x="50" y="291" width="221" height="25"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Student ID：123456789" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yad-Dn-zrX">
+                                <rect key="frame" x="67" y="347" width="187" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hNo-pR-Ae1" firstAttribute="top" secondItem="yFP-nM-m8k" secondAttribute="bottom" constant="47" id="IiJ-Qz-hEW"/>
+                            <constraint firstItem="wfu-ju-tjx" firstAttribute="centerX" secondItem="Tow-TW-2qn" secondAttribute="centerX" id="U30-BX-cTO"/>
+                            <constraint firstItem="Yad-Dn-zrX" firstAttribute="top" secondItem="wfu-ju-tjx" secondAttribute="bottom" constant="35" id="d37-2t-ANO"/>
+                            <constraint firstItem="Yad-Dn-zrX" firstAttribute="centerX" secondItem="Tow-TW-2qn" secondAttribute="centerX" id="oqb-Pw-e12"/>
+                            <constraint firstItem="wfu-ju-tjx" firstAttribute="top" secondItem="hNo-pR-Ae1" secondAttribute="bottom" constant="24" id="q3W-qt-xWS"/>
+                            <constraint firstItem="hNo-pR-Ae1" firstAttribute="centerX" secondItem="Tow-TW-2qn" secondAttribute="centerX" id="rcC-FA-DUN"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MHX-vX-c7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997" y="2076"/>
+        </scene>
+        <!--ForecastIO View Controller-->
+        <scene sceneID="wVH-86-CHo">
+            <objects>
+                <viewController storyboardIdentifier="ForecastIOViewController" id="Wjh-2c-wCc" customClass="ForecastIOViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YDP-Fp-x2Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="XW3-LS-VEK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qny-UT-HNq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXw-up-gwF">
+                                <rect key="frame" x="0.0" y="-44" width="320" height="612"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rXw-up-gwF" firstAttribute="top" secondItem="YDP-Fp-x2Y" secondAttribute="bottom" constant="-64" id="RYG-ZY-aJX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rXw-up-gwF" secondAttribute="trailing" constant="-16" id="WLx-eF-doX"/>
+                            <constraint firstItem="rXw-up-gwF" firstAttribute="leading" secondItem="Qny-UT-HNq" secondAttribute="leadingMargin" constant="-16" id="ilI-U0-mSA"/>
+                            <constraint firstItem="XW3-LS-VEK" firstAttribute="top" secondItem="rXw-up-gwF" secondAttribute="bottom" id="xDl-y1-NkS"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="rXw-up-gwF" id="2Zg-6u-8Qf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSM-Dx-GYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1371" y="2087"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="50t-a6-obJ">
             <objects>
@@ -1101,4 +1189,7 @@
             <point key="canvasLocation" x="1819" y="2165"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Profile.jpg" width="640" height="360"/>
+    </resources>
 </document>

@@ -44,6 +44,9 @@
 		543FF2C71C05492100D223B3 /* NextSevenDaysCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 543FF2C61C05492100D223B3 /* NextSevenDaysCollectionViewController.m */; };
 		543FF2CA1C05498500D223B3 /* NextSevenDaysCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 543FF2C91C05498500D223B3 /* NextSevenDaysCollectionViewCell.m */; };
 		543FF2CE1C054D2200D223B3 /* OBSpringyCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 543FF2CD1C054D2200D223B3 /* OBSpringyCollectionViewLayout.m */; };
+		543FF2D31C05612C00D223B3 /* ForecastIOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 543FF2D21C05612C00D223B3 /* ForecastIOViewController.m */; };
+		543FF2D61C0564BA00D223B3 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 543FF2D51C0564BA00D223B3 /* AboutViewController.m */; };
+		543FF2D81C05667A00D223B3 /* Profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 543FF2D71C05667A00D223B3 /* Profile.jpg */; };
 		5453668E1BFEEA4800E8CCBB /* ForecastSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5453668D1BFEEA4800E8CCBB /* ForecastSearchTableViewController.m */; };
 		545366911BFEF3E700E8CCBB /* LocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 545366901BFEF3E700E8CCBB /* LocationHelper.m */; };
 		545366951BFF26C900E8CCBB /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 545366941BFF26C900E8CCBB /* SessionManager.m */; };
@@ -159,6 +162,11 @@
 		543FF2C91C05498500D223B3 /* NextSevenDaysCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextSevenDaysCollectionViewCell.m; sourceTree = "<group>"; };
 		543FF2CC1C054D2200D223B3 /* OBSpringyCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBSpringyCollectionViewLayout.h; sourceTree = "<group>"; };
 		543FF2CD1C054D2200D223B3 /* OBSpringyCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBSpringyCollectionViewLayout.m; sourceTree = "<group>"; };
+		543FF2D11C05612C00D223B3 /* ForecastIOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForecastIOViewController.h; sourceTree = "<group>"; };
+		543FF2D21C05612C00D223B3 /* ForecastIOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastIOViewController.m; sourceTree = "<group>"; };
+		543FF2D41C0564BA00D223B3 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		543FF2D51C0564BA00D223B3 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		543FF2D71C05667A00D223B3 /* Profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Profile.jpg; sourceTree = "<group>"; };
 		5453668C1BFEEA4800E8CCBB /* ForecastSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForecastSearchTableViewController.h; sourceTree = "<group>"; };
 		5453668D1BFEEA4800E8CCBB /* ForecastSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastSearchTableViewController.m; sourceTree = "<group>"; };
 		5453668F1BFEF3E700E8CCBB /* LocationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationHelper.h; sourceTree = "<group>"; };
@@ -381,6 +389,7 @@
 		545366CB1C02D76400E8CCBB /* WeatherImages */ = {
 			isa = PBXGroup;
 			children = (
+				543FF2D71C05667A00D223B3 /* Profile.jpg */,
 				545366B31C02D75E00E8CCBB /* bg.jpg */,
 				545366B41C02D75E00E8CCBB /* clear_night.png */,
 				545366B51C02D75E00E8CCBB /* clear_day.png */,
@@ -421,6 +430,10 @@
 		54EFE0C51BFB304600679C22 /* WeatherReport */ = {
 			isa = PBXGroup;
 			children = (
+				543FF2D11C05612C00D223B3 /* ForecastIOViewController.h */,
+				543FF2D21C05612C00D223B3 /* ForecastIOViewController.m */,
+				543FF2D41C0564BA00D223B3 /* AboutViewController.h */,
+				543FF2D51C0564BA00D223B3 /* AboutViewController.m */,
 				54EFE0C91BFB304600679C22 /* AppDelegate.h */,
 				54EFE0CA1BFB304600679C22 /* AppDelegate.m */,
 				54EFE0CF1BFB304600679C22 /* Main.storyboard */,
@@ -580,6 +593,7 @@
 				545366C61C02D75E00E8CCBB /* forecast_logo.png in Resources */,
 				543F248E1C043D44006681B0 /* Aeris.bundle in Resources */,
 				545366BF1C02D75E00E8CCBB /* bg.jpg in Resources */,
+				543FF2D81C05667A00D223B3 /* Profile.jpg in Resources */,
 				545366C11C02D75E00E8CCBB /* clear_day.png in Resources */,
 				545366C01C02D75E00E8CCBB /* clear_night.png in Resources */,
 				545366CA1C02D75E00E8CCBB /* wind.png in Resources */,
@@ -637,6 +651,7 @@
 				543F24BF1C043EFC006681B0 /* AFHTTPSessionManager.m in Sources */,
 				54EFE0CB1BFB304600679C22 /* AppDelegate.m in Sources */,
 				543F24C21C043EFC006681B0 /* AFURLConnectionOperation.m in Sources */,
+				543FF2D61C0564BA00D223B3 /* AboutViewController.m in Sources */,
 				543F24C31C043EFC006681B0 /* AFURLRequestSerialization.m in Sources */,
 				543F24C51C043EFC006681B0 /* AFURLSessionManager.m in Sources */,
 				543F24C41C043EFC006681B0 /* AFURLResponseSerialization.m in Sources */,
@@ -649,6 +664,7 @@
 				545366A71C02B53500E8CCBB /* NextTwentyFourHoursTableViewController.m in Sources */,
 				543F24C01C043EFC006681B0 /* AFNetworkReachabilityManager.m in Sources */,
 				545366AA1C02B8AC00E8CCBB /* MoreDetailsContainerViewController.m in Sources */,
+				543FF2D31C05612C00D223B3 /* ForecastIOViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
