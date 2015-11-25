@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Enums.h"
 @interface LocationHelper : NSObject
 + (NSArray *) states;
 + (NSString *) stateCodeForState:(NSString *) state;
-+ (NSString *) dateDescriptionForTime:(NSInteger) time timeZone:(NSTimeZone *)timeZone;
++ (NSString *) hourDescriptionForTime:(NSInteger) time;
++ (NSString *) dateDescriptionForTime:(NSInteger) time;
++ (void) setTimeZone:(NSTimeZone *)timeZone;
++ (void) setSearchMode:(WeatherSearchMode)searchMode;
++ (NSString *) temperatureUnit;
 @end

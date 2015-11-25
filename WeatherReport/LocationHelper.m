@@ -10,7 +10,8 @@
 
 static NSArray *states;
 static NSDictionary *statesDictionary;
-
+static NSTimeZone *generalTimeZone;
+static WeatherSearchMode searchMode;
 @implementation LocationHelper
 
 + (NSArray *) states
@@ -78,18 +79,50 @@ static NSDictionary *statesDictionary;
     return statesDictionary;
 }
 
++ (void) setTimeZone:(NSTimeZone *)timeZone
+{
+    generalTimeZone = timeZone;
+}
+
 + (NSString *) stateCodeForState:(NSString *) state
 {
     return [LocationHelper statesDictionary][state];
 }
 
-+ (NSString *) dateDescriptionForTime:(NSInteger) time timeZone:(NSTimeZone *)timeZone
++ (NSString *) hourDescriptionForTime:(NSInteger) time
 {
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"HH:mm";
-    dateFormatter.timeZone = timeZone;
+    dateFormatter.timeZone = generalTimeZone;
     return [dateFormatter stringFromDate:date];
+}
+
++ (NSString *) dateDescriptionForTime:(NSInteger) time
+{
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.timeZone = generalTimeZone;
+    dateFormatter.dateFormat = @"EEEE, dd MMMM";
+    
+    return [dateFormatter stringFromDate:date];
+}
+
++ (void) setSearchMode:(WeatherSearchMode)newSearchMode
+{
+    searchMode = newSearchMode;
+}
+
++ (NSString *) temperatureUnit
+{
+    switch (searchMode) {
+        case WeatherSearchModeCelius:
+            return @"°C";
+        case WeatherSearchModeFahrenheit:
+            return @"°F";
+        default:
+            break;
+    }
 }
 
 @end

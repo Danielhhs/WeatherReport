@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface NextTwentyFourHoursTableViewController : UITableViewController
-
+@property (nonatomic, strong) NSDictionary *twentyFourHoursWeatherData;
 @end

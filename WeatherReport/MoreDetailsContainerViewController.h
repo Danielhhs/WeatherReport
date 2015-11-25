@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MoreDetailsContainerViewController : UIViewController
-
+@property (nonatomic, strong) NSDictionary *weatherData;
 @end
