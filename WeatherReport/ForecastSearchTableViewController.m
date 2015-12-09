@@ -33,6 +33,8 @@
 @property (nonatomic, strong) StatePickerViewController *statePicker;
 @property (nonatomic, strong) NSData *weatherData;
 @property (nonatomic, strong) UIView *maskView;
+
+@property (nonatomic, strong) UILabel *alertLabel;
 @end
 
 @implementation ForecastSearchTableViewController
@@ -80,6 +82,7 @@
     self.state = @"";
     [self.stateButton setTitle:@"Select" forState:UIControlStateNormal];
     self.searchMode = WeatherSearchModeFahrenheit;
+    [self.alertLabel removeFromSuperview];
 }
 
 - (IBAction)handleSearch:(id)sender {
@@ -116,6 +119,7 @@
         [self showAlertWithErrorMessage:@"State value should not be empty."];
         return NO;
     }
+    [self.alertLabel removeFromSuperview];
     return YES;
 }
 
@@ -125,12 +129,28 @@
     return [string length] == 0;
 }
 
+- (UILabel *) alertLabel
+{
+    if (!_alertLabel) {
+        _alertLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _alertLabel.font = [UIFont fontWithName:@"ChalkboardSE-Regular" size:20];
+        _alertLabel.textColor = [UIColor whiteColor];
+        _alertLabel.backgroundColor = [UIColor redColor];
+        _alertLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _alertLabel;
+}
+
 - (void) showAlertWithErrorMessage:(NSString *)message
 {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
-    [alert addAction:action];
-    [self presentViewController:alert animated:YES completion:nil];
+    self.alertLabel.text = message;
+    [self.alertLabel sizeToFit];
+    self.alertLabel.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMaxY(self.view.bounds) + self.alertLabel.frame.size.height / 2);
+    self.alertLabel.frame = CGRectMake(0, self.alertLabel.frame.origin.y, self.view.bounds.size.width, self.alertLabel.frame.size.height);
+    [self.view addSubview:self.alertLabel];
+    [UIView animateWithDuration:0.382 animations:^{
+        self.alertLabel.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMaxY(self.view.bounds) - self.alertLabel.frame.size.height / 2);
+    }];
 }
 
 - (void) goToForecastWebsite
@@ -156,6 +176,7 @@
 {
     self.city = self.cityTextField.text;
     self.street = self.streetTextField.text;
+    [self validateFormValues];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -215,6 +236,7 @@
     self.state = state;
     [self.stateButton setTitle:state forState:UIControlStateNormal];
     [self hideStatePicker];
+    [self validateFormValues];
 }
 
 - (void) statePickerDidCancel

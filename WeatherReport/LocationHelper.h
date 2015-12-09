@@ -13,6 +13,7 @@
 + (NSString *) stateCodeForState:(NSString *) state;
 + (NSString *) hourDescriptionForTime:(NSInteger) time;
 + (NSString *) dateDescriptionForTime:(NSInteger) time;
++ (NSString *) twelfHourDescriptionForTime:(NSInteger)time;
 + (void) setTimeZone:(NSTimeZone *)timeZone;
 + (void) setSearchMode:(WeatherSearchMode)searchMode;
 + (NSString *) temperatureUnit;

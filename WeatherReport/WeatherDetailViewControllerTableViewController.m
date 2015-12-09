@@ -127,6 +127,39 @@
         self.distanceUnit = @"mi";
     }
 }
+- (IBAction)viewMoreDetails:(id)sender {
+    MoreDetailsContainerViewController *moreDetailsViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MoreDetailsContainerViewController"];
+    moreDetailsViewController.weatherData = self.weather;
+    moreDetailsViewController.modalPresentationStyle = UIModalPresentationCustom;
+    moreDetailsViewController.transitioningDelegate = [FlipTransitionAnimator generalDelegate];
+    [self presentViewController:moreDetailsViewController animated:YES completion:nil];
+}
+- (IBAction)viewMap:(id)sender {
+    MapViewController *mapViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MapViewController"];
+    [self presentViewController:mapViewController animated:YES completion:nil];
+}
+- (IBAction)facebook:(id)sender {
+    NSDictionary *currentWeather = self.weather[@"currently"];
+    NSString *description = [NSString stringWithFormat:@"%@, %@ %@", currentWeather[@"summary"], [NumberHelper formattedTemperature:currentWeather[@"temperature"]], [LocationHelper temperatureUnit]];
+    NSDictionary *properties = @{
+                                 @"og:type": @"article",
+                                 @"og:title": self.weatherTitle.text,
+                                 @"og:description": description,
+                                 @"og:image:url": @"http://cs-server.usc.edu:45678/hw/hw8/images/rain.png",
+                                 };
+    FBSDKShareOpenGraphObject *object = [FBSDKShareOpenGraphObject objectWithProperties:properties];
+    FBSDKShareOpenGraphAction *action = [[FBSDKShareOpenGraphAction alloc] init];
+    action.actionType = @"news.publishes";
+    [action setObject:object forKey:@"article"];
+    
+    // Create the content
+    FBSDKShareOpenGraphContent *content = [[FBSDKShareOpenGraphContent alloc] init];
+    content.action = action;
+    content.previewPropertyName = @"article";
+    [FBSDKShareDialog showFromViewController:self
+                                 withContent:content
+                                    delegate:nil];
+}
 
 - (IBAction)handleMoreAction:(id)sender {
     UIAlertController *moreActionsActionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];

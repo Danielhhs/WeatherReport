@@ -98,6 +98,15 @@ static WeatherSearchMode searchMode;
     return [dateFormatter stringFromDate:date];
 }
 
++ (NSString *) twelfHourDescriptionForTime:(NSInteger)time
+{
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"HH:mm a";
+    dateFormatter.timeZone = generalTimeZone;
+    return [dateFormatter stringFromDate:date];
+}
+
 + (NSString *) dateDescriptionForTime:(NSInteger) time
 {
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
